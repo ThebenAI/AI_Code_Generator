@@ -1,0 +1,98 @@
+[
+  {
+    "objectName": "MARA",
+    "objectType": "table",
+    "domain": "materials",
+    "description": "General material master data.",
+    "fields": ["MATNR", "MTART", "MBRSH", "MEINS", "MATKL", "ERSDA"],
+    "keywords": ["material", "product", "item", "master", "catalog"]
+  },
+  {
+    "objectName": "MARC",
+    "objectType": "table",
+    "domain": "materials",
+    "description": "Material master data at plant level.",
+    "fields": ["MATNR", "WERKS", "DISMM", "DISPO", "BESKZ", "PLIFZ"],
+    "keywords": ["material", "plant", "mrp", "planning", "stock"]
+  },
+  {
+    "objectName": "KNA1",
+    "objectType": "table",
+    "domain": "sales",
+    "description": "General customer master data.",
+    "fields": ["KUNNR", "NAME1", "LAND1", "ORT01", "REGIO", "KTOKD"],
+    "keywords": ["customer", "client", "account", "business partner", "master"]
+  },
+  {
+    "objectName": "VBAK",
+    "objectType": "table",
+    "domain": "sales",
+    "description": "Sales document header data.",
+    "fields": ["VBELN", "AUART", "VKORG", "VTWEG", "SPART", "KUNNR"],
+    "keywords": ["sales order", "order header", "sales document", "commercial"]
+  },
+  {
+    "objectName": "VBAP",
+    "objectType": "table",
+    "domain": "sales",
+    "description": "Sales document item data.",
+    "fields": ["VBELN", "POSNR", "MATNR", "KWMENG", "VRKME", "NETWR"],
+    "keywords": ["sales order item", "line item", "ordered quantity", "pricing"]
+  },
+  {
+    "objectName": "EKKO",
+    "objectType": "table",
+    "domain": "purchasing",
+    "description": "Purchasing document header data.",
+    "fields": ["EBELN", "BSART", "LIFNR", "EKORG", "BUKRS", "BEDAT"],
+    "keywords": ["purchase order", "procurement", "vendor", "purchasing header"]
+  },
+  {
+    "objectName": "EKPO",
+    "objectType": "table",
+    "domain": "purchasing",
+    "description": "Purchasing document item data.",
+    "fields": ["EBELN", "EBELP", "MATNR", "MENGE", "NETPR", "WERKS"],
+    "keywords": ["purchase order item", "procurement item", "quantity", "price"]
+  },
+  {
+    "objectName": "BKPF",
+    "objectType": "table",
+    "domain": "finance",
+    "description": "Accounting document header data.",
+    "fields": ["BELNR", "BUKRS", "GJAHR", "BLART", "BUDAT", "WAERS"],
+    "keywords": ["accounting", "financial document", "fi", "posting", "header"]
+  },
+  {
+    "objectName": "BSEG",
+    "objectType": "table",
+    "domain": "finance",
+    "description": "Accounting document segment (line item) data.",
+    "fields": ["BELNR", "BUKRS", "GJAHR", "BUZEI", "HKONT", "DMBTR"],
+    "keywords": ["gl", "line item", "accounting item", "amount", "ledger"]
+  },
+  {
+    "objectName": "I_SALESDOCUMENT",
+    "objectType": "cds_view",
+    "domain": "sales",
+    "description": "Core CDS view for sales document analytics.",
+    "fields": ["SalesDocument", "SalesDocumentType", "SalesOrganization", "DistributionChannel", "SoldToParty"],
+    "keywords": ["cds", "sales analytics", "fiori", "odata", "s4hana"]
+  },
+  {
+    "objectName": "I_MATERIAL",
+    "objectType": "cds_view",
+    "domain": "materials",
+    "description": "Core CDS view for material master reporting.",
+    "fields": ["Material", "MaterialType", "BaseUnit", "IndustrySector", "MaterialGroup"],
+    "keywords": ["cds", "material analytics", "product reporting", "s4hana"]
+  },
+  {
+    "objectName": "Z_*",
+    "objectType": "custom_extension_pattern",
+    "domain": "custom",
+    "description": "Placeholder pattern for customer-specific custom objects.",
+    "fields": ["Z* custom fields based on local design"],
+    "keywords": ["custom", "z table", "z field", "extension", "customer specific"]
+  }
+]

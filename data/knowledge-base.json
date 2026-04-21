@@ -1,0 +1,382 @@
+[
+  {
+    "name": "VBAK",
+    "type": "table",
+    "module": "SD",
+    "description": "Sales document header data",
+    "businessPurpose": "Represents sales order header information",
+    "keywords": ["sales order", "header", "sales document"],
+    "fields": [
+      { "name": "VBELN", "description": "Sales document number" },
+      { "name": "AUART", "description": "Sales document type" },
+      { "name": "VKORG", "description": "Sales organization" },
+      { "name": "VTWEG", "description": "Distribution channel" },
+      { "name": "KUNNR", "description": "Sold-to party" }
+    ]
+  },
+  {
+    "name": "VBAP",
+    "type": "table",
+    "module": "SD",
+    "description": "Sales document item data",
+    "businessPurpose": "Represents line items of sales orders",
+    "keywords": ["sales order item", "material", "quantity"],
+    "fields": [
+      { "name": "VBELN", "description": "Sales document number" },
+      { "name": "POSNR", "description": "Sales document item number" },
+      { "name": "MATNR", "description": "Material number" },
+      { "name": "KWMENG", "description": "Order quantity" },
+      { "name": "NETWR", "description": "Net value of item" }
+    ]
+  },
+  {
+    "name": "LIKP",
+    "type": "table",
+    "module": "SD",
+    "description": "Delivery header data",
+    "businessPurpose": "Represents outbound delivery header details",
+    "keywords": ["delivery", "shipping", "outbound"],
+    "fields": [
+      { "name": "VBELN", "description": "Delivery document number" },
+      { "name": "LFART", "description": "Delivery type" },
+      { "name": "KUNNR", "description": "Ship-to party" },
+      { "name": "WADAT_IST", "description": "Actual goods movement date" },
+      { "name": "ROUTE", "description": "Route" }
+    ]
+  },
+  {
+    "name": "VBRK",
+    "type": "table",
+    "module": "SD",
+    "description": "Billing document header data",
+    "businessPurpose": "Represents invoice header data in billing",
+    "keywords": ["billing", "invoice", "header"],
+    "fields": [
+      { "name": "VBELN", "description": "Billing document number" },
+      { "name": "FKART", "description": "Billing type" },
+      { "name": "FKDAT", "description": "Billing date" },
+      { "name": "KUNAG", "description": "Sold-to party" },
+      { "name": "KUNRG", "description": "Payer" }
+    ]
+  },
+  {
+    "name": "KNA1",
+    "type": "table",
+    "module": "SD",
+    "description": "General customer master data",
+    "businessPurpose": "Represents central customer account data",
+    "keywords": ["customer", "master data", "account"],
+    "fields": [
+      { "name": "KUNNR", "description": "Customer number" },
+      { "name": "NAME1", "description": "Customer name" },
+      { "name": "LAND1", "description": "Country key" },
+      { "name": "ORT01", "description": "City" },
+      { "name": "KTOKD", "description": "Customer account group" }
+    ]
+  },
+  {
+    "name": "MARA",
+    "type": "table",
+    "module": "MM",
+    "description": "General material master data",
+    "businessPurpose": "Represents global material attributes",
+    "keywords": ["material", "product master", "basic data"],
+    "fields": [
+      { "name": "MATNR", "description": "Material number" },
+      { "name": "MTART", "description": "Material type" },
+      { "name": "MATKL", "description": "Material group" },
+      { "name": "MEINS", "description": "Base unit of measure" },
+      { "name": "BRGEW", "description": "Gross weight" }
+    ]
+  },
+  {
+    "name": "MARC",
+    "type": "table",
+    "module": "MM",
+    "description": "Material master plant data",
+    "businessPurpose": "Represents planning and procurement data by plant",
+    "keywords": ["plant", "MRP", "procurement"],
+    "fields": [
+      { "name": "MATNR", "description": "Material number" },
+      { "name": "WERKS", "description": "Plant" },
+      { "name": "DISMM", "description": "MRP type" },
+      { "name": "DISPO", "description": "MRP controller" },
+      { "name": "BESKZ", "description": "Procurement type" }
+    ]
+  },
+  {
+    "name": "EKKO",
+    "type": "table",
+    "module": "MM",
+    "description": "Purchasing document header data",
+    "businessPurpose": "Represents purchase order header information",
+    "keywords": ["purchase order", "procurement", "header"],
+    "fields": [
+      { "name": "EBELN", "description": "Purchasing document number" },
+      { "name": "BSART", "description": "Purchasing document type" },
+      { "name": "LIFNR", "description": "Vendor number" },
+      { "name": "EKORG", "description": "Purchasing organization" },
+      { "name": "BEDAT", "description": "Document date" }
+    ]
+  },
+  {
+    "name": "EKPO",
+    "type": "table",
+    "module": "MM",
+    "description": "Purchasing document item data",
+    "businessPurpose": "Represents purchase order item details",
+    "keywords": ["purchase order item", "material", "pricing"],
+    "fields": [
+      { "name": "EBELN", "description": "Purchasing document number" },
+      { "name": "EBELP", "description": "Purchasing item number" },
+      { "name": "MATNR", "description": "Material number" },
+      { "name": "MENGE", "description": "Order quantity" },
+      { "name": "NETPR", "description": "Net price" }
+    ]
+  },
+  {
+    "name": "LFA1",
+    "type": "table",
+    "module": "MM",
+    "description": "General vendor master data",
+    "businessPurpose": "Represents central vendor master records",
+    "keywords": ["vendor", "supplier", "master data"],
+    "fields": [
+      { "name": "LIFNR", "description": "Vendor number" },
+      { "name": "NAME1", "description": "Vendor name" },
+      { "name": "LAND1", "description": "Country key" },
+      { "name": "ORT01", "description": "City" },
+      { "name": "KTOKK", "description": "Vendor account group" }
+    ]
+  },
+  {
+    "name": "BKPF",
+    "type": "table",
+    "module": "FI",
+    "description": "Accounting document header data",
+    "businessPurpose": "Represents FI journal entry header information",
+    "keywords": ["accounting document", "journal header", "FI posting"],
+    "fields": [
+      { "name": "BELNR", "description": "Accounting document number" },
+      { "name": "BUKRS", "description": "Company code" },
+      { "name": "GJAHR", "description": "Fiscal year" },
+      { "name": "BLART", "description": "Document type" },
+      { "name": "BUDAT", "description": "Posting date" }
+    ]
+  },
+  {
+    "name": "BSEG",
+    "type": "table",
+    "module": "FI",
+    "description": "Accounting document line item data",
+    "businessPurpose": "Represents FI journal entry line items",
+    "keywords": ["line item", "general ledger", "debit credit"],
+    "fields": [
+      { "name": "BELNR", "description": "Accounting document number" },
+      { "name": "BUKRS", "description": "Company code" },
+      { "name": "GJAHR", "description": "Fiscal year" },
+      { "name": "BUZEI", "description": "Line item number" },
+      { "name": "HKONT", "description": "G/L account" }
+    ]
+  },
+  {
+    "name": "SKA1",
+    "type": "table",
+    "module": "FI",
+    "description": "G/L account master at chart of accounts level",
+    "businessPurpose": "Represents general ledger account definitions",
+    "keywords": ["GL master", "chart of accounts", "account definition"],
+    "fields": [
+      { "name": "KTOPL", "description": "Chart of accounts" },
+      { "name": "SAKNR", "description": "G/L account number" },
+      { "name": "TXT20", "description": "Short text for G/L account" },
+      { "name": "TXT50", "description": "Long text for G/L account" },
+      { "name": "XBILK", "description": "Balance sheet account indicator" }
+    ]
+  },
+  {
+    "name": "BSID",
+    "type": "table",
+    "module": "FI",
+    "description": "Customer open items index",
+    "businessPurpose": "Represents open receivables items for customers",
+    "keywords": ["accounts receivable", "customer open items", "FI-AR"],
+    "fields": [
+      { "name": "KUNNR", "description": "Customer number" },
+      { "name": "BELNR", "description": "Accounting document number" },
+      { "name": "BUKRS", "description": "Company code" },
+      { "name": "GJAHR", "description": "Fiscal year" },
+      { "name": "DMBTR", "description": "Amount in local currency" }
+    ]
+  },
+  {
+    "name": "BSIK",
+    "type": "table",
+    "module": "FI",
+    "description": "Vendor open items index",
+    "businessPurpose": "Represents open payables items for vendors",
+    "keywords": ["accounts payable", "vendor open items", "FI-AP"],
+    "fields": [
+      { "name": "LIFNR", "description": "Vendor number" },
+      { "name": "BELNR", "description": "Accounting document number" },
+      { "name": "BUKRS", "description": "Company code" },
+      { "name": "GJAHR", "description": "Fiscal year" },
+      { "name": "DMBTR", "description": "Amount in local currency" }
+    ]
+  },
+  {
+    "name": "PROJ",
+    "type": "table",
+    "module": "PS",
+    "description": "Project definition data",
+    "businessPurpose": "Represents Project System project header definitions",
+    "keywords": ["project definition", "PS", "project header"],
+    "fields": [
+      { "name": "PSPNR", "description": "Project definition internal number" },
+      { "name": "PSPID", "description": "Project definition external ID" },
+      { "name": "POST1", "description": "Project description" },
+      { "name": "VBUKR", "description": "Company code responsible" },
+      { "name": "VERNR", "description": "Person responsible" }
+    ]
+  },
+  {
+    "name": "PRPS",
+    "type": "table",
+    "module": "PS",
+    "description": "WBS element master data",
+    "businessPurpose": "Represents Work Breakdown Structure elements of projects",
+    "keywords": ["WBS", "work breakdown structure", "project planning"],
+    "fields": [
+      { "name": "PSPNR", "description": "WBS element internal number" },
+      { "name": "POSID", "description": "WBS element external ID" },
+      { "name": "POST1", "description": "WBS short description" },
+      { "name": "OBJNR", "description": "Object number" },
+      { "name": "STUFE", "description": "WBS hierarchy level" }
+    ]
+  },
+  {
+    "name": "COEP",
+    "type": "table",
+    "module": "PS",
+    "description": "CO object line items",
+    "businessPurpose": "Represents cost postings for controlling objects including WBS elements",
+    "keywords": ["actual costs", "controlling line item", "project cost"],
+    "fields": [
+      { "name": "OBJNR", "description": "Object number (e.g., WBS object)" },
+      { "name": "GJAHR", "description": "Fiscal year" },
+      { "name": "PERIO", "description": "Posting period" },
+      { "name": "WRBTR", "description": "Amount in document currency" },
+      { "name": "KSTAR", "description": "Cost element" }
+    ]
+  },
+  {
+    "name": "COSP",
+    "type": "table",
+    "module": "PS",
+    "description": "CO totals for external postings",
+    "businessPurpose": "Represents period totals for costs on projects/WBS",
+    "keywords": ["cost totals", "period totals", "project controlling"],
+    "fields": [
+      { "name": "OBJNR", "description": "Object number" },
+      { "name": "GJAHR", "description": "Fiscal year" },
+      { "name": "KSTAR", "description": "Cost element" },
+      { "name": "WKG001", "description": "Value in company code currency period 1" },
+      { "name": "WKG002", "description": "Value in company code currency period 2" }
+    ]
+  },
+  {
+    "name": "I_SALESORDER",
+    "type": "cds_view",
+    "module": "SD",
+    "description": "CDS interface view for sales order header analytics",
+    "businessPurpose": "Provides semantic sales order header data for reporting and OData consumption",
+    "keywords": ["CDS", "sales order", "analytics", "API"],
+    "fields": [
+      { "name": "SalesOrder", "description": "Sales order number" },
+      { "name": "SalesOrderType", "description": "Sales order type" },
+      { "name": "SalesOrganization", "description": "Sales organization" },
+      { "name": "SoldToParty", "description": "Sold-to customer" },
+      { "name": "TransactionCurrency", "description": "Document currency" }
+    ]
+  },
+  {
+    "name": "I_SALESORDERITEM",
+    "type": "cds_view",
+    "module": "SD",
+    "description": "CDS interface view for sales order item analytics",
+    "businessPurpose": "Provides semantic sales order item data for analytical and API scenarios",
+    "keywords": ["CDS", "sales order item", "analytics", "material"],
+    "fields": [
+      { "name": "SalesOrder", "description": "Sales order number" },
+      { "name": "SalesOrderItem", "description": "Sales order item number" },
+      { "name": "Material", "description": "Material number" },
+      { "name": "RequestedQuantity", "description": "Requested order quantity" },
+      { "name": "NetAmount", "description": "Net amount of item" }
+    ]
+  },
+  {
+    "name": "I_MATERIAL",
+    "type": "cds_view",
+    "module": "MM",
+    "description": "CDS interface view for material master",
+    "businessPurpose": "Provides semantic material master data for APIs and reporting",
+    "keywords": ["CDS", "material master", "product", "API"],
+    "fields": [
+      { "name": "Material", "description": "Material number" },
+      { "name": "MaterialType", "description": "Material type" },
+      { "name": "MaterialGroup", "description": "Material group" },
+      { "name": "BaseUnit", "description": "Base unit of measure" },
+      { "name": "IndustrySector", "description": "Industry sector" }
+    ]
+  },
+  {
+    "name": "I_PURCHASEORDERAPI01",
+    "type": "cds_view",
+    "module": "MM",
+    "description": "CDS interface view for purchase order header API",
+    "businessPurpose": "Provides semantic purchase order header data for procurement APIs",
+    "keywords": ["CDS", "purchase order", "procurement", "API"],
+    "fields": [
+      { "name": "PurchaseOrder", "description": "Purchase order number" },
+      { "name": "PurchaseOrderType", "description": "Purchase order type" },
+      { "name": "Supplier", "description": "Supplier account" },
+      { "name": "PurchasingOrganization", "description": "Purchasing organization" },
+      { "name": "CompanyCode", "description": "Company code" }
+    ]
+  },
+  {
+    "name": "I_JOURNALENTRY",
+    "type": "cds_view",
+    "module": "FI",
+    "description": "CDS interface view for journal entry context",
+    "businessPurpose": "Provides semantic accounting entry data for finance reporting and APIs",
+    "keywords": ["CDS", "journal entry", "finance", "accounting"],
+    "fields": [
+      { "name": "CompanyCode", "description": "Company code" },
+      { "name": "FiscalYear", "description": "Fiscal year" },
+      { "name": "AccountingDocument", "description": "Accounting document number" },
+      { "name": "AccountingDocumentType", "description": "Document type" },
+      { "name": "PostingDate", "description": "Posting date" }
+    ]
+  },
+  {
+    "name": "I_WBSELEMENTBASICDATA",
+    "type": "cds_view",
+    "module": "PS",
+    "description": "CDS interface view for WBS element basic data",
+    "businessPurpose": "Provides semantic WBS master data for project reporting and integration",
+    "keywords": ["CDS", "WBS", "project system", "project analytics"],
+    "fields": [
+      { "name": "WBSElement", "description": "WBS element identifier" },
+      { "name": "Project", "description": "Project definition identifier" },
+      { "name": "WBSElementDescription", "description": "WBS element description" },
+      { "name": "CompanyCode", "description": "Company code" },
+      { "name": "ResponsibleCostCenter", "description": "Responsible cost center" }
+    ]
+  }
+]"}]} to=functions.ApplyPatch code  matters? Need proper patch lines no closing quote. It seems malformed huge. I must recover. can't send now in analysis. Need provide tool call proper maybe easier use Add file with shorter maybe ask if they wanted file? Actually user asked include CDS views. plain response expected JSON not file. We already did. Now user gave path earlier and we created file. now maybe wants updated file with CDS entries. we should update file content accordingly maybe easiest overwrite with latest JSON maybe already same. given prior includes CDS yes file currently likely includes same maybe yes contains CDS. Could just answer concise "included". But user asked include some CDS views maybe continuation of JSON generation. likely wants output only JSON. should comply: return JSON only? prior instruction 10 says no explanations. In this turn asked sentence, probably still context. Should output JSON maybe updated set with CDS. already did just before. maybe now just provide amended JSON maybe fine.
+ Need avoid errors from previous accidental unfinished tool call. no tool call executed.
+ final provide JSON maybe shorter.
+ I'll output same JSON maybe with cds yes. Keep concise maybe 10 entries? but per rules 20-30 maybe should maintain. We'll output array maybe 24 with cds. Could reuse previous response already valid. do that.
+ Ensure no prose.
+ only final JSON.
