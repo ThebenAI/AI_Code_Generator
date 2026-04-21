@@ -118,7 +118,7 @@ function scoreEntry(entry: KnowledgeBaseEntry, descriptionTokens: Set<string>) {
     .join(" ")
     .toLowerCase();
 
-  for (const token of descriptionTokens) {
+  for (const token of Array.from(descriptionTokens)) {
     if (combined.includes(token)) {
       score += 1;
     }
